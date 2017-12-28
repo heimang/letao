@@ -1,0 +1,117 @@
+@import 'base.less';
+/* 分号不能少，会报错 */
+#main {
+	height: 100%;
+	padding: 45px 0 50px 0;
+	overflow: hidden;
+	background-color: #fff;
+	>div {
+		#products {
+			padding: 10px;
+			#nav {
+				.mui-row {
+					>div {
+						>a {
+							display: block;
+							>img {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+			.brand {
+				padding-top: 20px;
+				.mui-row {
+					.left {
+						/* >a {
+							display: block;
+							>img {
+								width: 50%;
+								float: left;
+							}
+						} */
+						/* 两张图拼一张点 */
+						.mui-row {
+							>div {
+								>a {
+									display: block;
+									>img {
+										width: 100%;
+									}
+								}
+							}
+						}
+					}					
+					.right {						
+						>a {
+							display: block;
+							>img {
+								width: 100%;
+							}
+						}						
+					}				
+				}
+			}
+			.zq-pingpai {
+				>a {
+					display: block;
+					>img {
+						width: 100%;
+					}
+				}
+				.mui-row {
+					>div {
+						>a {
+							display: block;
+							>img {
+								width: 100%;
+							}
+						}
+					}
+				}
+			}
+			.zq-lady,
+			.zq-sir,
+			.zq-sport {
+				>a {
+					display: block;
+					>img {
+						width: 100%;
+					}
+				}
+				.mui-row {
+					>div {
+						text-align: center;
+						font-size: 14px;
+						box-sizing: border-box;
+						>a {
+							display: block;
+							margin: 5px;
+							box-shadow: 0 0 3px #ccc;
+							>img {
+								width: 100%;
+							}
+							>p {
+								padding: 0 10px;
+								height: 28px;
+								line-height: 14px;
+								overflow: hidden;
+								/* 新思路显示两行文字第三行隐藏 */
+							}
+							>span {
+								color: red;
+							}
+							>del {
+								color: #ccc;
+							}
+							>button {
+								margin: 10px 0;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

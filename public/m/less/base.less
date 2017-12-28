@@ -1,0 +1,80 @@
+@main-color: #006699; 
+/* 分号不能少，会报错 */
+#header {
+	background-color: @main-color;
+	position: fixed;
+	width: 100%;
+	height: 45px;
+	z-index: 999;
+	>h4 {
+		line-height: 45px;
+		text-align: center;
+		margin: 0;
+		font-weight: normal;
+		color: #fff;
+	}
+	>a {
+		color: #fff;
+		position: absolute;
+		top: 14px;
+		right: 20px;
+	}
+	>form {
+		margin: 5px 45px 0 45px;
+		
+		background-color: #fff;
+		>input {
+			margin-bottom: 0;
+			text-align: left;
+		}
+	}
+	>i {
+		color: #fff;
+		position: absolute;
+		top: 14px;
+		left: 20px;
+	}
+}
+#footer {	
+	position: fixed;
+	width: 100%;
+	z-index: 999;
+	left: 0;
+	bottom: 0;
+	.mui-content {
+		background-color: @main-color;
+		height: 50px;
+		padding: 10px 0;
+		.mui-row {
+			>div {
+				text-align: center;
+				>a {
+					display: block;	
+					text-decoration: none;
+					color: #fff;
+					font-size: 14px;
+					>span {
+						display: block;	
+						margin-top: 5px;	
+					}
+					&.active {
+						color: orange;
+					}
+				}
+			}
+		}
+	}
+}
+html,body {
+	height: 100%;
+}
+img {
+	vertical-align: middle;
+}
+li {
+	list-style: none;
+}
+* {
+	margin: 0;
+	padding: 0;
+}

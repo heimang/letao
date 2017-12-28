@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+        <link rel="stylesheet/less" href="less/search.less">
+        <script src="lib/less/less.js"></script>
+    </head>
+    <body>
+        <header id="header">
+        	<i class="fa fa-arrow-left" aria-hidden="true"></i>
+        	<h4>搜索中心</h4>
+        </header>
+        <section id="main">
+        	<div class="search">
+        		<input type="search" placeholder="请输入">
+        		<button type="button" class="mui-btn mui-btn-primary">搜索</button>
+        	</div>
+        	<div class="history">
+        		<p> 
+        			<span>历史纪录</span>
+        			<i class="fa fa-trash" aria-hidden="true"> 清空列表</i>
+        			<!-- 清空前空格一个 -->
+        		</p>
+        		<div class="searchList">
+        			<ul class="mui-table-view">
+    					<li class="mui-table-view-cell">
+    					    <a href="javascript:;">
+    					    	<span>手机</span>
+								<i class="fa fa-times" aria-hidden="true"></i>
+    					    </a>
+    					</li>
+					</ul>
+        		</div>
+        	</div>
+        </section>
+        <footer id="footer">
+            <div class="mui-content">
+                <div class="mui-row">
+                    <div class=" mui-col-xs-3">       
+                        <a href="index.html" class=" fa fa-home active">
+                            <span>首页</span>    
+                        </a>                       
+                    </div>
+                    <div class="mui-col-xs-3">                       
+                        <a href="category.html" class=" fa fa-bars">
+                            <span>分类</span> 
+                        </a>                        
+                    </div>
+                    <div class="mui-col-xs-3">                        
+                        <a class=" fa fa-shopping-cart">
+                            <span>购物车</span> 
+                        </a>                      
+                    </div>
+                    <div class="mui-col-xs-3">                       
+                        <a class=" fa fa-user">
+                            <span>会员中心</span> 
+                        </a>                      
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script id='historyTmp' type="text/html">
+        	{{each}}
+        		<li class="mui-table-view-cell">
+    				<a href="javascript:;">
+    					<span>{{$value}}</span>
+						<i class="fa fa-times" aria-hidden="true"></i>
+    				</a>
+    			</li>
+        	{{/each}}
+        </script>
+        <script src="lib/artTemplate/template.js"></script>
+        <script src="lib/mui/js/mui.min.js"></script>
+        <script src="lib/zepto/zepto.min.js"></script>
+        <script src="js/search.js"></script>
+    </body>
+</html>

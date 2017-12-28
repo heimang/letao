@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link type="image/x-icon"rel="shortcut icon"href="images/favicon.ico"> 
+        <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+        <link rel="stylesheet/less" href="less/category.less">
+        <script src="lib/less/less.js"></script>
+    </head>
+    <body>
+        <header id="header">
+        	<i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <form action="#">
+            	<input type="search" placeholder="请输入">
+            </form>
+            <a href="search.html" class="fa fa-search"></a>
+        </header>
+        <section id="main">
+        	<div class="left">
+        		<ul>
+        			<!-- <li class="active"><a href="javascript:;">运动馆</a></li>
+        			<li><a href="javascript:;">运动馆</a></li>
+        			<li><a href="javascript:;">运动馆</a></li>
+        			<li><a href="javascript:;">运动馆</a></li>
+        			<li><a href="javascript:;">运动馆</a></li> -->
+        		</ul>
+        	</div>
+  			<div class="right mui-scroll-wrapper ">
+  				<div class="mui-scroll">
+  					<div class="mui-row ">
+  						<!-- <div class="mui-col-xs-4">
+  						 					<a href="javascript:;">
+  						 						<img src="images/brand1.png" alt="">
+  						 						<p>耐克</p>
+  						 					</a>
+  						 				</div>
+  						 				<div class="mui-col-xs-4">
+  						 					<a href="javascript:;">
+  						 						<img src="images/brand1.png" alt="">
+  						 						<p>耐克</p>
+  						 					</a>
+  						 				</div>
+  						 				<div class="mui-col-xs-4">
+  						 					<a href="javascript:;">
+  						 						<img src="images/brand1.png" alt="">
+  						 						<p>耐克</p>
+  						 					</a>
+  						 				</div>
+  						 				<div class="mui-col-xs-4">
+  						 					<a href="javascript:;">
+  						 						<img src="images/brand1.png" alt="">
+  						 						<p>耐克</p>
+  						 					</a>
+  						 				</div>
+  						 				<div class="mui-col-xs-4">
+  						 					<a href="javascript:;">
+  						 						<img src="images/brand1.png" alt="">
+  						 						<p>耐克</p>
+  						 					</a>
+  						 				</div>        --> 				
+  					</div>
+  				</div>
+  			</div>
+        	<!-- <div class="mui-scroll-wrapper">
+        					<div class="mui-scroll">
+        						<div class="mui-row">
+        				<div class="mui-col-xs-4">
+        					<a href="javascript:;">
+        						<img src="images/brand1.png" alt="">
+        						<p>耐克</p>
+        					</a>
+        				</div>
+        				<div class="mui-col-xs-4">
+        					<a href="javascript:;">
+        						<img src="images/brand1.png" alt="">
+        						<p>耐克</p>
+        					</a>
+        				</div>
+        				<div class="mui-col-xs-4">
+        					<a href="javascript:;">
+        						<img src="images/brand1.png" alt="">
+        						<p>耐克</p>
+        					</a>
+        				</div>
+        				<div class="mui-col-xs-4">
+        					<a href="javascript:;">
+        						<img src="images/brand1.png" alt="">
+        						<p>耐克</p>
+        					</a>
+        				</div>
+        				<div class="mui-col-xs-4">
+        					<a href="javascript:;">
+        						<img src="images/brand1.png" alt="">
+        						<p>耐克</p>
+        					</a>
+        				</div>        				
+        			</div>
+        					</div>
+        				</div> -->
+        </section>
+        <footer id="footer">
+            <div class="mui-content">
+                <div class="mui-row">
+                    <div class=" mui-col-xs-3">       
+                        <a href="index.html" class=" fa fa-home">
+                            <span>首页</span>    
+                        </a>                       
+                    </div>
+                    <div class="mui-col-xs-3">                       
+                        <a href="category.html" class=" fa fa-bars active">
+                            <span>分类</span> 
+                        </a>                        
+                    </div>
+                    <div class="mui-col-xs-3">                        
+                        <a class=" fa fa-shopping-cart">
+                            <span>购物车</span> 
+                        </a>                      
+                    </div>
+                    <div class="mui-col-xs-3">                       
+                        <a class=" fa fa-user">
+                            <span>会员中心</span> 
+                        </a>                      
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script id="categoryListTmp" type="text/html">
+        	{{each rows}}
+        		<li data-id='{{$value.id}}'><a href="javascript:;">{{$value.categoryName}}</a></li>
+        	{{/each}}
+        </script>
+        <script id="categoryProductTmp" type="text/html">
+        	{{each rows}}
+        		<div class="mui-col-xs-4">
+  					<a href="javascript:;">
+  						<img src="{{$value.brandLogo}}" alt="">
+  						<p>{{$value.brandName}}</p>
+  					</a>
+  				</div>  
+  			{{/each}}
+        </script>
+        <script id="category"></script>
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="js/category.js"></script>
+    </body>
+</html>
