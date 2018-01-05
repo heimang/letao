@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="lib/fontAwesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="lib/mui/css/mui.min.css">
+        <link rel="stylesheet/less" href="less/detail.less">
+        <script src="lib/less/less.js"></script>
+    </head>
+    <body>
+    	<header id="header">
+        	<i class="fa fa-arrow-left" aria-hidden="true"></i>
+        	<h4>商品详情</h4>
+        </header>
+    	<section id="main">
+    		<!--下拉刷新容器-->
+			<div id="refreshContainer" class="mui-content mui-scroll-wrapper">
+			    <div class="mui-scroll">
+			   		<div class="mui-slider">  
+        	    		<div class="mui-slider-group mui-slider-loop">			
+						</div>
+						<div class="mui-slider-indicator">
+						</div>
+					</div>	    
+			    	<div class="name">协助</div>
+			    	<div class="price">
+			    		<span>价格：</span><span class="newPrice">￥44</span><del class="oldPrice">￥20</del>
+			    	</div>
+			    	<div class="size">
+			    		
+			    	</div>
+			    	<div class="count">
+			    		<span>数量：</span><span class="reduce">-</span><span class="num">0</span><span class="add">+</span>
+			    		<span>剩余：</span>
+			    		<span class="maxCount">20件</span>
+			    	</div>
+				</div>
+			</div>
+    	</section>
+    	<footer id="footer">
+            <i class="fa fa-shopping-cart" aria-hidden="true"></i>
+            <button type="button" class="mui-btn mui-btn-blue right">立即购买</button>
+			<button type="button" class="mui-btn mui-btn-danger left">加入购物车</button>
+        </footer>
+        <script id="slideTmp" type="text/html">
+			{{each pic}}
+				<div class="mui-slider-item">
+					<a href="#">
+						<img src="{{$value.picAddr}}" />
+					</a>
+				</div>
+			{{/each}}
+			</div>     	 	  	  			
+        </script>
+         <script id="sizeTmp" type="text/html">
+        	尺码：
+        	{{each size}}
+        		<span>{{$value}}</span>
+        	{{/each}}
+        </script>
+        <script id="scrollTmp" type="text/html">       
+        	{{each pic}}
+        		<div class="mui-indicator"></div>
+        	{{/each}}
+        </script>	 
+        <!-- <div class="mui-indicator mui-active"></div> 多了一个圆点啊 生成个数的思想 -->
+    <script src="lib/artTemplate/template.js"></script>
+    <script src="lib/mui/js/mui.min.js"></script>
+    <script src="lib/zepto/zepto.min.js"></script>
+    <script src="js/detail.js"></script>
+    </body>
+</html>

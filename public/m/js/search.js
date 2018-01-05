@@ -1,23 +1,26 @@
 
 /** @Author: lt
 * @Date:   2017-12-27 21:46:28
-* @Last Modified by:   lt
-* @Last Modified time: 2017-12-28 11:25:55
+* @Last Modified by:   姊佽吘
+* @Last Modified time: 2017-12-30 11:55:43
 */
 
-/*$(function(){
+$(function(){
 	historyData();
 	getData();
 	deleteData();
 	clearData();
+	searchProducts()
 })
 function getData(){
 	$('.search button').on('click',function(){
-		var str = $(this).prev().val();
+		var str = $(this).prev().val().trim();
+		console.log(str);
+		if(!str) return; // 空格不搜索
 		$(this).prev().val('');
 		var history = localStorage.getItem('history');
 		if(history){
-			history = JSON.parse(history + '');
+			history = JSON.parse(history);
 			if(history.indexOf(str) == -1){
 				history.push(str);
 			}
@@ -25,18 +28,19 @@ function getData(){
 			history = history || [];
 			history.push(str);
 		}
-		history = history.reverse();
-		var html = template('historyTmp',history);
-		$('.history .searchList ul').html(html);
+		// history = history.reverse();
+		/*var html = template('historyTmp',history);
+		$('.history .searchList ul').html(html);*/ // 解决反转问题如下：只在渲染时反转数组，存进的数据不反转
 		history = JSON.stringify(history);
 		localStorage.setItem('history',history);
+		historyData();
 	})
 }
 function deleteData(){
 	$('.history .searchList ul').on('click','li a i',function(){
 		var str = $(this).prev().text();
 		var history = localStorage.getItem('history');
-		history = JSON.parse(history + '');
+		history = JSON.parse(history);
 		var num = history.indexOf(str);
 		history.splice(num,1);
 		history = history.length == 0 ? '' : JSON.stringify(history);
@@ -52,15 +56,27 @@ function clearData(){
 }
 function historyData(){
 	var history = localStorage.getItem('history');
+	console.log(history);
 	if(history){
-		history = JSON.parse(history  + '');
+		history = JSON.parse(history);
 		history = history.reverse();
 		var html = template('historyTmp',history);
 		$('.history .searchList ul').html(html);
 	}else {
 		$('.history .searchList ul').html('没有历史纪录');
 	}
-}*/
+}
+function searchProducts(){
+	$('.search button').on('tap',function(){
+		var product = $(this).prev().val().trim();
+		if(!product) return;
+		window.location.href = 'products.html?products=' + product;
+	});
+	$('.searchList ul').on('click','li',function(){
+		var product = $(this).find('span').text();
+		window.location.href = 'products.html?products=' + product;
+	})
+}
 // 获取值 查询记录 对比 渲染页面
 /*$(function(){
 	var history = localStorage.getItem('history');
@@ -78,7 +94,7 @@ function historyData(){
 			if(history.indexOf(str) == -1) {
 				//history.push(str);
 				//history.reverse();
-				//每新加一次就反转一次，有问题，直接每次加在第一位
+				//每新加一次就反转一次，有问题，直接每次加在第一位  或者只在渲染时反转数组，存进的数据不反转
 				history.unshift(str);
 				// history = JSON.stringify(history); // 转成串
 				// localStorage.setItem('history',history);				
@@ -113,7 +129,7 @@ function historyData(){
 	})
 
 })*/
-$(function(){
+/*$(function(){
 	var history = localStorage.getItem('history');
 	if(history){
 		history = JSON.parse(history);
@@ -125,7 +141,7 @@ $(function(){
 	$('.search button').on('click',function(){
 		// 空文本判断
 		var str = $(this).prev().val().trim();
-		// console.log(str);是字符串
+		// console.log(str);  是字符串
 		if(str){		
 			$(this).prev().val('');
 			history = localStorage.getItem('history');
@@ -161,4 +177,4 @@ $(function(){
 		localStorage.setItem('history',history);
 
 	})
-})
+})*/

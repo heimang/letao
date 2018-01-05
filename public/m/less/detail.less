@@ -1,0 +1,77 @@
+@import 'base.less';
+#main {
+	height: 100%;
+	padding-top: 45px;
+	padding-bottom: 50px;
+	.mui-content {
+		position: relative;
+		height: 100%;
+		.mui-scroll {
+			font-size: 14px;
+			.name {
+				font-size: 18px;
+				padding: 15px 5px;
+				border-bottom: 1px solid #ccc;
+			}
+			.price {
+				padding: 12px 5px;
+				border-bottom: 1px solid #ccc;
+				.newPrice {
+					font-size: 20px;
+					color: red;
+					margin-right: 10px;
+				}
+				.oldPrice {
+					color: #ccc;
+				}
+			}
+			.size {
+				padding: 12px 5px;
+				border-bottom: 1px solid #ccc;
+				>span {
+					display: inline-block;
+					border: 1px solid #ccc;
+					padding: 5px;
+					margin-left: 5px;
+					margin-bottom: 5px;
+					&.active {
+						color: orange;
+					}
+				}
+			}
+			.count {
+				padding: 10px 5px;
+				.reduce,
+				.num,
+				.add {
+					display: inline-block;
+					border: 1px solid #ccc;
+					width: 28px;
+					height: 28px;
+					line-height: 28px;
+					text-align: center;
+				}
+
+			}
+
+		}
+	}  
+}
+#footer {
+	height: 50px;
+	line-height: 40px;
+	padding: 5px 15px;
+	background-color: #ccc;
+	>i {
+		margin-left: 15px;
+	}
+	.left {
+		float: right;
+		margin-right: 15px;
+		margin-top: 5px;
+	}
+	.right {
+		float: right;
+		margin-top: 5px;
+	}
+}

@@ -10,3 +10,7 @@ git add .
 git pull origin master
 git commit -m '2017-12-29'
 git push -u origin master
+
+开服务环境。在当前文件甲开黑窗。输入npm start 用git提交
+
+慢慢买 在慢慢买项目先删loc 再开2个bat。即2个黑窗用svn提交

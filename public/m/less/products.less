@@ -1,0 +1,80 @@
+@import 'base.less';
+#main {
+	padding-top: 45px;
+	padding-bottom: 50px;
+	height: 100%;
+	#refreshContainer {
+		position: relative;
+		height: 100%;
+		.search {
+			position: relative;
+			padding: 10px;
+			overflow: hidden;
+			>input {
+				/* position: absolute; */
+				margin-bottom: 0;
+				padding-left: 10px;
+				text-align: left;
+				border-radius:5;
+				border: 1px solid @main-color;
+			}
+			>button {
+				position: absolute;
+				right: 10px;
+				bottom: 10px;
+				background-color: @main-color;
+				border-color: @main-color;
+				border-radius:0 5px 5px 0;
+			}
+		}
+		.nav {
+			.mui-row {
+				padding: 10px;
+				>div {
+					text-align: center;
+					line-height: 24px;
+					>span {
+						font-size: 14px;
+					}
+					&.active {
+						color: orange;
+					}
+				}
+			}
+		}
+		.products {
+			.mui-row {
+				>div {
+					text-align: center;
+					font-size: 14px;
+					box-sizing: border-box;
+					>a {
+						display: block;
+						margin: 5px;
+						box-shadow: 0 0 3px #ccc;
+						>img {
+							width: 100%;
+						}
+						>p {
+							padding: 0 10px;
+							height: 28px;
+							line-height: 14px;
+							overflow: hidden;
+							/* 新思路显示两行文字第三行隐藏 */
+						}
+						>span {
+							color: red;
+						}
+						>del {
+							color: #ccc;
+						}
+						>button {
+							margin: 10px 0;
+						}
+					}
+				}
+			}
+		}
+	}
+	
+}
